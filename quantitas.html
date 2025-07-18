@@ -1,108 +1,193 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-</head>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-  .bg-fundo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 1080px;
-    height: 1920px;
-    background-image: url('./public/imgs/institucional/envato-labs-image-edit(43).png');
-    background-repeat: round;
-  }
-  .bg-fundo-Sec01{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 1080px;
-    height: 1920px;
-    align-items: flex-start;
-    overflow: hidden;
-    background-image: url('./public/imgs/institucional/Grupo\ 268.png');
-  }
-  .bg-fundo-Sec02{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 1080px;
-    height: 1920px;
-    align-items: flex-start;
-    overflow: hidden;
-    background-image: url('./public/imgs/institucional/Grupo\ de\ máscara\ 1.png');
-  }
-  .bg-fundo-Sec03{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 1080px;
-    height: 1920px;
-    align-items: flex-start;
-    overflow: hidden;
-    background-image: url('./public/imgs/institucional/mallorca/Grupo\ de\ máscara\ 2.png');
-  }
-  .bg-fundo-Sec04{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 1080px;
-    height: 1920px;
-    overflow: hidden;
-    align-items: flex-start;
-    background-image: url('./public/imgs/institucional/mallorca/Grupo\ de\ máscara\ 2.png');
-  }
-  .tittle{
-    border: 2px solid white;
-    border-radius: 17px;
-    margin-top: 30px;
-    margin-bottom: 40px;
-  }
-  span{
-    font-weight: bold;
-  }
-  section:not(:first-of-type) {
-    display: none;
-  }
-  .pdf {
-        width: 100%;
-
+    .bg-fundo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 2160px;
+      height: 3840px;
+      background-image: url("./public/imgs/institucional/home.png");
+      background-repeat: round;
     }
-</style>
-<script type=”module” src="./js/bypass.js"></script>
-<script src="js/custom-elements-builtin.js"></script>
+    .bg-fundo-Sec01 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 2160px;
+      height: 3840px;
+      align-items: flex-start;
+      overflow: hidden;
+      background-image: url("./public/imgs/institucional/Grupo\ 268.png");
+    }
+    .bg-fundo-Sec02 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 2160px;
+      height: 3840px;
+      align-items: flex-start;
+      overflow: hidden;
+      background-image: url("./public/imgs/institucional/Grupo\ de\ máscara\ 1.png");
+    }
+    .bg-fundo-Sec03 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 2160px;
+      height: 3840px;
+      align-items: flex-start;
+      overflow: hidden;
+      background-image: url("./public/imgs/institucional/mallorca/Grupo\ de\ máscara\ 2.png");
+    }
+    .bg-fundo-Sec04 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 2160px;
+      height: 3840px;
+      overflow: hidden;
+      align-items: flex-start;
+      background-image: url("./public/imgs/institucional/mallorca/Grupo\ de\ máscara\ 2.png");
+    }
+    .tittle {
+      border: 2px solid white;
+      border-radius: 17px;
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+    span {
+      font-weight: bold;
+    }
+    section:not(:first-of-type) {
+      display: none;
+    }
+    .pdf {
+      width: 100%;
+    }
+  </style>
+  <script type="”module”" src="./js/bypass.js"></script>
+  <script src="js/custom-elements-builtin.js"></script>
 
-<body>
-
-<div id="pdfModal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-10 hidden">
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden  h-[70%] w-[70%]">
-            <div class="flex justify-between items-center p-4 bg-gray-800">
-                <h2 class="text-white" style="font-size: 14px;">PDF </h2>
-                <button id="closeModal" class="text-white">&times;</button>
-            </div>
-            <iframe class="pdf" referrerpolicy="origin" is="x-frame-bypass"
-              src=
-"./public/pdfs/Quantitas Tela Touch Jun 2024 V2.pdf#view=FitH"
-          width="800" height="100%">
-      </iframe>
+  <body>
+    <div
+      id="pdfModal"
+      class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-10 hidden"
+    >
+      <div
+        class="bg-white rounded-lg shadow-lg overflow-hidden h-[70%] w-[70%]"
+      >
+        <div class="flex justify-between items-center p-4 bg-gray-800">
+          <h2 class="text-white" style="font-size: 14px">PDF</h2>
+          <button id="closeModal" class="text-white">&times;</button>
         </div>
+        <iframe
+          class="pdf"
+          referrerpolicy="origin"
+          is="x-frame-bypass"
+          src="./public/pdfs/Quantitas Tela Touch Jun 2024 V2.pdf#view=FitH"
+          width="800"
+          height="100%"
+        >
+        </iframe>
+      </div>
     </div>
- 
-  <div>
-   <section id="btnSec0-Sec-0 Sec-0" class="btnSec0-Sec-0">
-    <main class="bg-fundo">
-        <div class="mt-[83px]">
-            <img src="./public/imgs/institucional/LOGO.png" class="w-[494px] h-[107px]"/></a>
-        </div>
 
-        <div class=" flex gap-6  mt-[18rem]">
+    <div>
+      <section id="btnSec0-Sec-0 Sec-0" class="btnSec0-Sec-0">
+        <div class="bg-fundo">
+          <button
+            style="
+              position: absolute;
+              width: 960px;
+              height: 590px;
+              top: 854px;
+              /* background-color: black; */
+              border-radius: 10%;
+              opacity: 0.8;
+              left: 90px;
+            "
+            id="btnSec1"
+          ></button>
+          <button
+            style="
+              position: absolute;
+              width: 960px;
+              height: 590px;
+              top: 854px;
+              /* background-color: black; */
+              border-radius: 10%;
+              opacity: 0.8;
+              left: 1120px;
+            "
+            id="btnSec2"
+          ></button>
+          <button
+            style="
+              position: absolute;
+              width: 960px;
+              height: 590px;
+              top: 1576px;
+              /* background-color: black; */
+              border-radius: 10%;
+              opacity: 0.8;
+              left: 90px;
+            "
+            id="btnSec3"
+          ></button>
+          <button
+            style="
+              position: absolute;
+              width: 960px;
+              height: 590px;
+              top: 1576px;
+              /* background-color: black; */
+              border-radius: 10%;
+              opacity: 0.8;
+              left: 1120px;
+            "
+            id="btnSec4"
+          ></button>
+          <button
+            style="
+              position: absolute;
+              width: 960px;
+              height: 590px;
+              top: 2300px;
+              /* background-color: black; */
+              border-radius: 10%;
+              opacity: 0.8;
+              left: 90px;
+            "
+            id="btnSec5"
+          ></button>
+          <button
+            style="
+              position: absolute;
+              width: 960px;
+              height: 590px;
+              top: 2300px;
+              /* background-color: black; */
+              border-radius: 10%;
+              opacity: 0.8;
+              left: 1120px;
+            "
+            id="btnSec6"
+          ></button>
+
+          <!-- <div class="pt-[168px]">
+            <img src="./public/imgs/institucional/LOGO.png"/></a>
+        </div> -->
+
+          <!-- <div class=" flex gap-6  mt-[18rem]">
           <div
           style="width: 470px;
           height: 335px;
@@ -196,9 +281,9 @@
           </div>
           </div>
           </div>
-        </div>
+        </div> -->
 
-        <!-- <div class=" flex gap-6  mt-6">
+          <!-- <div class=" flex gap-6  mt-6">
           <div
           >
           <div
@@ -263,142 +348,210 @@
           </div>
           </div>
         </div> -->
-      </main>
-   </section> 
-   <section id="btnSec1-Sec-1 Sec-1" class="btnSec1-Sec-1"> 
-    <main class="bg-fundo-Sec01">
-      <img src="./public/imgs/institucional/institucional.png" alt="institucional">
-      <button id="btnBackToHome" class="absolute w-[5.5rem] h-[3.5rem] bottom-[25px] left-[69px]"></button>
-    </main>
-   </section>
-   <section id="Sec-2" class="btnSec2-Sec-2"> 
-    <main class="bg-fundo-Sec03">
-      <img src="./public/imgs/institucional/mallorca/mallorca.png" alt="mallorca">
-      <button id="btnBackToHome" class="absolute w-[5.5rem] h-[3.5rem] bottom-[25px] left-[69px]"></button>
-    </main>
-   </section>
-   <section id="btnSec3-Sec-3 Sec-3" class="btnSec3-Sec-3"> 
-    <main class="bg-fundo-Sec04">
-      <img src="./public/imgs/institucional/galapagos/galapagos.png" alt="galapagos">
-      <button id="btnBackToHome" class="absolute w-[5.5rem] h-[3.5rem] bottom-[25px] left-[69px]"></button>
-    </main>
-   </section>
-   <section id="btnSec4-Sec-4 Sec-4" class="btnSec4-Sec-4"> 
-    <main class="bg-fundo-Sec04">
-      <img src="./public/imgs/institucional/capri/capri.png" alt="capri">
-      <button id="btnBackToHome" class="absolute w-[5.5rem] h-[3.5rem] bottom-[25px] left-[69px]"></button>
-    </main>
-   </section>
-   <section id="btnSec5-Sec-5 Sec-5" class="btnSec5-Sec-5"> 
-    <main class="bg-fundo-Sec04">
-      <img src="./public/imgs/institucional/montecristo/montecristo.png" alt="montecristo">
-      <button id="btnBackToHome" class="absolute w-[5.5rem] h-[3.5rem] bottom-[25px] left-[69px]"></button>
-    </main>
-   </section>
-   <section id="btnSec6-Sec-6 Sec-6" class="btnSec6-Sec-6">  
-    <main class="bg-fundo-Sec04">
-      <img src="./public/imgs/institucional/maldivas/maldivas.png" alt="maldivas">
-      <button id="btnBackToHome" class="absolute w-[5.5rem] h-[3.5rem] bottom-[25px] left-[69px]"></button>
-    </main>
-   </section>
-   <section id="btnSec8-Sec-8 Sec-8" class="btnSec8-Sec-8"> 
-    <main class="bg-fundo-Sec01">
-      <div class="p-16">
-        <div>
-          <img src="./public/imgs/institucional/materiais/h2.png" alt="">
         </div>
-  
-        <div class="flex flex-row items-center justify-center gap-10 w-full mt-[32px]">
-          <img src="./public/imgs/institucional/materiais/Grupo 289.png" class=""/>
-        </div>
-  
-        <div class="flex flex-row items-center justify-center gap-10 w-full mt-[32px]">
-          <img src="./public/imgs/institucional/materiais/Grupo 278.png" class=""/>
-        </div>
-  
-        <div>
-          <img src="./public/imgs/institucional/materiais/Grupo 277.png" alt="" class=" mt-[32px]">
-        </div>
-        
-        <div class="flex flex-row mt-10 justify-between">
-          <div>
-            <button id="btnBackToHome">
-              <img src="./public/imgs/institucional/retangulo12.png" alt="" srcset=""
-              >
-              <lottie-player src="/js/lottieLeft.json" background="transparent" speed="1" style="width: 100px; height: 100px; margin-top:-83px; transform: rotate(90deg); margin-left: -13px;" direction="1" mode="normal" loop autoplay></lottie-player> 
-            </button>
-          </div>
-          <!-- <div style="width: 400px; height: 400px;">
+      </section>
+      <section id="btnSec1-Sec-1 Sec-1" class="btnSec1-Sec-1">
+        <main class="bg-fundo-Sec01">
+          <img
+            src="./public/imgs/institucional/institucional.png"
+            alt="institucional"
+          />
+          <button
+            id="btnBackToHome"
+            class="absolute w-[8.5rem] h-[6.5rem] bottom-[112px] left-[143px]"
+          ></button>
+        </main>
+      </section>
+      <section id="Sec-2" class="btnSec2-Sec-2">
+        <main class="bg-fundo-Sec03">
+          <img
+            src="./public/imgs/institucional/mallorca/mallorca.png"
+            alt="mallorca"
+          />
+          <button
+            id="btnBackToHome"
+            class="absolute w-[8.5rem] h-[6.5rem] bottom-[112px] left-[143px]"
+          ></button>
+        </main>
+      </section>
+      <section id="btnSec3-Sec-3 Sec-3" class="btnSec3-Sec-3">
+        <main class="bg-fundo-Sec04">
+          <img
+            src="./public/imgs/institucional/galapagos/galapagos.png"
+            alt="galapagos"
+          />
+          <button
+            id="btnBackToHome"
+            class="absolute w-[8.5rem] h-[6.5rem] bottom-[112px] left-[143px]"
+          ></button>
+        </main>
+      </section>
+      <section id="btnSec4-Sec-4 Sec-4" class="btnSec4-Sec-4">
+        <main class="bg-fundo-Sec04">
+          <img src="./public/imgs/institucional/capri/capri.png" alt="capri" />
+          <button
+            id="btnBackToHome"
+            class="absolute w-[8.5rem] h-[6.5rem] bottom-[112px] left-[143px]"
+          ></button>
+        </main>
+      </section>
+      <section id="btnSec5-Sec-5 Sec-5" class="btnSec5-Sec-5">
+        <main class="bg-fundo-Sec04">
+          <img
+            src="./public/imgs/institucional/montecristo/montecristo.png"
+            alt="montecristo"
+          />
+          <button
+            id="btnBackToHome"
+            class="absolute w-[8.5rem] h-[6.5rem] bottom-[112px] left-[143px]"
+          ></button>
+        </main>
+      </section>
+      <section id="btnSec6-Sec-6 Sec-6" class="btnSec6-Sec-6">
+        <main class="bg-fundo-Sec04">
+          <img
+            src="./public/imgs/institucional/maldivas/maldivas.png"
+            alt="maldivas"
+          />
+          <button
+            id="btnBackToHome"
+            class="absolute w-[8.5rem] h-[6.5rem] bottom-[112px] left-[143px]"
+          ></button>
+        </main>
+      </section>
+      <section id="btnSec8-Sec-8 Sec-8" class="btnSec8-Sec-8">
+        <main class="bg-fundo-Sec01">
+          <div class="p-16">
+            <div>
+              <img src="./public/imgs/institucional/materiais/h2.png" alt="" />
+            </div>
+
+            <div
+              class="flex flex-row items-center justify-center gap-10 w-full mt-[32px]"
+            >
+              <img
+                src="./public/imgs/institucional/materiais/Grupo 289.png"
+                class=""
+              />
+            </div>
+
+            <div
+              class="flex flex-row items-center justify-center gap-10 w-full mt-[32px]"
+            >
+              <img
+                src="./public/imgs/institucional/materiais/Grupo 278.png"
+                class=""
+              />
+            </div>
+
+            <div>
+              <img
+                src="./public/imgs/institucional/materiais/Grupo 277.png"
+                alt=""
+                class="mt-[32px]"
+              />
+            </div>
+
+            <div class="flex flex-row mt-10 justify-between">
+              <div>
+                <button id="btnBackToHome">
+                  <img
+                    src="./public/imgs/institucional/retangulo12.png"
+                    alt=""
+                    srcset=""
+                  />
+                  <lottie-player
+                    src="/js/lottieLeft.json"
+                    background="transparent"
+                    speed="1"
+                    style="
+                      width: 100px;
+                      height: 100px;
+                      margin-top: -83px;
+                      transform: rotate(90deg);
+                      margin-left: -13px;
+                    "
+                    direction="1"
+                    mode="normal"
+                    loop
+                    autoplay
+                  ></lottie-player>
+                </button>
+              </div>
+              <!-- <div style="width: 400px; height: 400px;">
             <a href="#" id="openModal">
               <img src="./public/imgs/institucional/Grupo 228.png" alt="" srcset="">
             </a>
           </div> -->
-        </div>
-      </div>
+            </div>
+          </div>
+        </main>
+      </section>
+    </div>
+    <script>
+      // Função para mostrar a seção correspondente
+      function showSection(sectionId) {
+        console.log(sectionId);
+        // Esconde todas as seções
+        document.querySelectorAll("section").forEach((section) => {
+          section.style.display = "none";
+        });
 
-    </main>
-   </section>
-  </div>
-  <script>
-    // Função para mostrar a seção correspondente
-    function showSection(sectionId) {
-      console.log(sectionId)
-      // Esconde todas as seções
-      document.querySelectorAll('section').forEach(section => {
-        section.style.display = 'none';
-      });
-         
-      document.querySelector(sectionId).style.display = 'block';
-    }
-
-    var btnSecs = [
-      '#btnSec1', '#btnSec2', '#btnSec3','#btnSec4','#btnSec5', '#btnSec6', '#btnSec7', '#btnSec8'
-    ]
-
-    // Adiciona eventos de clique nas imagens
-    document.querySelectorAll(btnSecs).forEach((item, index)=> {
-    
-      item.addEventListener('click', () => {
-        showSection(`.${item.id}-Sec-${index + 1}`);
-      });
-    })
-
-    // Adiciona evento de clique para voltar à tela inicial
-    document.querySelectorAll('#btnBackToHome').forEach(item => {
-      item.addEventListener('click', () => {
-        showSection('.btnSec0-Sec-0');
-      });
-    })
-    
-  </script>
-<script>
-  // Get modal elements
-  const modal = document.getElementById('pdfModal');
-  const iframe = document.querySelector('.pdf');
-  const openModalBtn = document.querySelectorAll('#openModal');
-  const closeModalBtn = document.getElementById('closeModal');
-
-  // Open modal when button is clicked
-  openModalBtn.forEach(item=>{
-    item.addEventListener('click', () => {
-      console.log(`./public/pdfs/${item.classList.value}#view=FitH`);
-      iframe.src = `./public/pdfs/${item.classList.value}#view=FitH`;
-      modal.classList.remove('hidden');
-  });
-  })
-
-  // Close modal when close button is clicked
-  closeModalBtn.addEventListener('click', () => {
-      modal.classList.add('hidden');
-  });
-
-  // Close modal when clicking outside of the modal content
-  window.addEventListener('click', (e) => {
-      if (e.target === modal) {
-          modal.classList.add('hidden');
+        document.querySelector(sectionId).style.display = "block";
       }
-  });
-</script>
-</body>
 
+      var btnSecs = [
+        "#btnSec1",
+        "#btnSec2",
+        "#btnSec3",
+        "#btnSec4",
+        "#btnSec5",
+        "#btnSec6",
+        "#btnSec7",
+        "#btnSec8",
+      ];
+
+      // Adiciona eventos de clique nas imagens
+      document.querySelectorAll(btnSecs).forEach((item, index) => {
+        item.addEventListener("click", () => {
+          showSection(`.${item.id}-Sec-${index + 1}`);
+        });
+      });
+
+      // Adiciona evento de clique para voltar à tela inicial
+      document.querySelectorAll("#btnBackToHome").forEach((item) => {
+        item.addEventListener("click", () => {
+          showSection(".btnSec0-Sec-0");
+        });
+      });
+    </script>
+    <script>
+      // Get modal elements
+      const modal = document.getElementById("pdfModal");
+      const iframe = document.querySelector(".pdf");
+      const openModalBtn = document.querySelectorAll("#openModal");
+      const closeModalBtn = document.getElementById("closeModal");
+
+      // Open modal when button is clicked
+      openModalBtn.forEach((item) => {
+        item.addEventListener("click", () => {
+          console.log(`./public/pdfs/${item.classList.value}#view=FitH`);
+          iframe.src = `./public/pdfs/${item.classList.value}#view=FitH`;
+          modal.classList.remove("hidden");
+        });
+      });
+
+      // Close modal when close button is clicked
+      closeModalBtn.addEventListener("click", () => {
+        modal.classList.add("hidden");
+      });
+
+      // Close modal when clicking outside of the modal content
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
 </html>
