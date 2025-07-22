@@ -78,29 +78,6 @@
   <script src="js/custom-elements-builtin.js"></script>
 
   <body>
-    <div
-      id="pdfModal"
-      class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-10 hidden"
-    >
-      <div
-        class="bg-white rounded-lg shadow-lg overflow-hidden h-[70%] w-[70%]"
-      >
-        <div class="flex justify-between items-center p-4 bg-gray-800">
-          <h2 class="text-white" style="font-size: 14px">PDF</h2>
-          <button id="closeModal" class="text-white">&times;</button>
-        </div>
-        <iframe
-          class="pdf"
-          referrerpolicy="origin"
-          is="x-frame-bypass"
-          src="./public/pdfs/Quantitas Tela Touch Jun 2024 V2.pdf#view=FitH"
-          width="800"
-          height="100%"
-        >
-        </iframe>
-      </div>
-    </div>
-
     <div>
       <section id="btnSec0-Sec-0 Sec-0" class="btnSec0-Sec-0">
         <div class="bg-fundo">
@@ -346,22 +323,31 @@
       <!-- Mallorca -->
       <section id="btnPresentation2.1" class="btnPresentation2-Sec-2">
         <img src="./public/imgs/institucional/mallorca/apremallorca1.png" />
-        <img
+        <button
+          class="prev-button absolute bottom-[1362px] left-[478px] w-[371px] h-[205px]"
+        ></button>
+        <button
+          id="home"
+          class="absolute bottom-[1348px] right-[1020px] w-[200px] h-[200px]"
+        ></button>
+        <button
+          class="next-button absolute bottom-[1362px] right-[566px] w-[371px] h-[205px]"
+        ></button>
+        <!-- <img
           src="./public/imgs/institucional/materiais/arrowLeft.png"
           alt="arrowLeft"
           class="prev-button absolute bottom-[1362px] left-[478px]"
         />
         <img
-          id="home"
           src="./public/imgs/institucional/materiais/home 3.png"
           alt="Home"
           class="absolute bottom-[1348px] right-[1020px]"
-        />
-        <img
+        /> -->
+        <!-- <img
           src="./public/imgs/institucional/materiais/arrowRight.png"
           alt="arrowRight"
           class="next-button absolute bottom-[1362px] right-[566px]"
-        />
+        /> -->
       </section>
       <section id="btnPresentation2.2" class="btnPresentation2-Sec-2">
         <img src="./public/imgs/institucional/mallorca/apremallorca2.png" />
@@ -500,11 +486,11 @@
       </section>
       <section id="btnPresentation3.2" class="btnPresentation3-Sec-3">
         <img src="./public/imgs/institucional/galapagos/apregalapagos2.png" />
-        <img
+        <!-- <img
           src="./public/imgs/institucional/mallorca/image 3.png"
           alt="grafic"
           class="bottom-[800px] absolute"
-        />
+        /> -->
         <img
           src="./public/imgs/institucional/materiais/Group (2).png"
           alt="arrowLeft"
